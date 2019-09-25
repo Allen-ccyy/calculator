@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Coursys - Formular tester</title>
+    <link rel="stylesheet" type="text/css" href="css/calculator.css">
+  </head>
+  <body>
+    <script src="js/calculator.js"></script>
+    <div class = "container">
+    <div class="box1">
+    <br>
+    <h1>Grade Calculator</h1>
+    <div class = "box2">
+    <p><strong>Activities</strong></p>
+    <p1>Give grades to the numeric activities:</p1>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th><strong>Name</strong></th>
+          <th><strong>Short Name</strong></th>
+          <th><strong>Weight</strong></th>
+          <th><strong>Grade</strong></th>
+          <th><strong>Percent</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Activity 1</td>
+          <td>A1</td>
+          <td><input type="number" Id="Weight1" size="9" min = "0" max = "9999"></td>
+          <td><input type="number" oninput = "myfunc5()" Id="first1" size="9" min = "0" max = "9999">
+            /<br><input type="number" oninput = "myfunc1()" Id="first2" size="9" min = "0" max = "9999"></td>
+          <td Id="p1"> </td>
+        </tr>
+        <tr>
+          <td>Activity 2</td>
+          <td>A2</td>
+          <td><input type="number" Id="Weight2" size="9" min = "0" max = "9999"></td>
+          <td><input type="number" oninput = "myfunc6()" Id="second1" size="9" min = "0" max = "9999">
+            /<br><input type="number" oninput = "myfunc2()" Id="second2" size="9" min = "0" max = "9999"></td>
+          <td Id = "p2"> </td>
+        </tr>
+        <tr>
+          <td>Activity 3</td>
+          <td>A3</td>
+          <td><input type="number" Id="Weight3" size="9" min = "0" max = "9999"></td>
+          <td><input type="number" oninput = "myfunc7()" Id="third1" size="9" min = "0" max = "9999">
+            /<br><input type="number" oninput = "myfunc3()" Id="third2" size="9" min = "0" max = "9999"></td>
+          <td Id = "p3"> </td>
+        </tr>
+        <tr>
+          <td>Activity 4</td>
+          <td>A4</td>
+          <td><input type="number" Id="Weight4" size="9" min = "0" max = "9999"></td>
+          <td><input type="number" Id="forth1" oninput = "myfunc8()" size="9" min = "0" max = "9999">
+            /<br><input type="number" oninput = "myfunc4()" Id="forth2" size="9" min = "0" max = "9999"></td>
+          <td Id = "p4"> </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <p2><strong>Result</strong></p2>
+    <br>
+    <br>
+    <p3 Id = "result"><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong></p3>
+    <div align ="right">
+      <button type="button" onclick = "CalWeight()" name="weight"><strong>WEIGHTED</strong></button>
+      <button type="button" onclick="CalMean()" name="mean"><strong>MEAN</strong></button>
+    </div>
+  </div>
+  </div>
+  </div>
+  </body>
+</html>
