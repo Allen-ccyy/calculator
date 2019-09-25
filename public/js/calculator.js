@@ -145,6 +145,7 @@ function CalMean(){
     window.alert("Calulation Error")
   }
   else if(pair1 == 3 ||pair2 == 3 || pair3 == 3 || pair4 == 3){
+    document.getElementById('result').innerHTML  = "Error";
     window.alert("Please enter positive value")
   }
   else if(pair1 == 1 &&pair2 == 1 && pair3 == 1 && pair4 == 1){
@@ -186,8 +187,12 @@ function check2(a1,a2,a3)
     else if(a3 < 0){return 3;}
     else{return 1};
   }
+  else if(a1 < 0 || a2 < 0){
+    return 3;
+  }
   else{
     if(a3 == ""){return 0;}
+    else if(a3 <0){return 3;}
     else{return 2;}
   }
 }
@@ -229,6 +234,7 @@ function CalWeight(){
     document.getElementById('result').innerHTML  = "&nbsp;&nbsp;&nbsp;&nbsp";
   }
   else if(pair1 == 3 ||pair2 == 3 || pair3 == 3 || pair4 == 3){
+    document.getElementById('result').innerHTML  = "Error";
     window.alert("Please enter positive value")
   }
   else{
