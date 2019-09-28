@@ -150,6 +150,7 @@ function CalMean(){
   }
   else if(pair1 == 1 &&pair2 == 1 && pair3 == 1 && pair4 == 1){
     document.getElementById('result').innerHTML  = "&nbsp;&nbsp;&nbsp;&nbsp";
+    document.getElementById('total').innerHTML  = "&nbsp;&nbsp;&nbsp;&nbsp";
   }
   else{
     if(pair1 == 2){
@@ -167,8 +168,10 @@ function CalMean(){
       flag++;
     }
     if(flag >0){
+      var y = result;
       result = ((result/flag) * 100).toFixed(2) + '%';
       document.getElementById('result').innerHTML = result;
+      document.getElementById('total').innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp";
     }
 
   }
@@ -253,8 +256,10 @@ function CalWeight(){
       flag = add(flag,a4);
     }
     if(flag >0){
+      var x = result;
       result = ((result/flag) * 100).toFixed(2) + '%';
       document.getElementById('result').innerHTML = result;
+      document.getElementById('total').innerHTML = (x + "/" +flag);
     }
 
   }
