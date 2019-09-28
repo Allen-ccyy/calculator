@@ -7,7 +7,7 @@ function myfunc1() {
   if(x==""|| y==""){
     document.getElementById('p1').innerHTML =  " ";
   }
-  if(x < 0|| y < 0){
+  if(x <= 0|| y <= 0){
     document.getElementById('p1').innerHTML =  " ";
   }
 }
@@ -20,7 +20,7 @@ function myfunc2() {
   if(x==""|| y==""){
     document.getElementById('p2').innerHTML =  " ";
   }
-  if(x < 0|| y < 0){
+  if(x <= 0|| y <= 0){
     document.getElementById('p2').innerHTML =  " ";
   }
 }
@@ -33,7 +33,7 @@ function myfunc3() {
   if(x==""|| y==""){
     document.getElementById('p3').innerHTML =  " ";
   }
-  if(x < 0|| y < 0){
+  if(x <= 0|| y <= 0){
     document.getElementById('p3').innerHTML =  " ";
   }
 }
@@ -46,7 +46,7 @@ function myfunc4() {
   if(x==""|| y==""){
     document.getElementById('p4').innerHTML = " ";
   }
-  if(x < 0|| y < 0){
+  if(x <= 0|| y <= 0){
     document.getElementById('p4').innerHTML =  " ";
   }
 }
@@ -60,7 +60,7 @@ function myfunc5() {
   if(x==""|| y==""){
     document.getElementById('p1').innerHTML =  " ";
   }
-  if(x < 0|| y < 0){
+  if(x <= 0|| y <= 0){
     document.getElementById('p1').innerHTML =  " ";
   }
 }
@@ -73,7 +73,7 @@ function myfunc6() {
   if(x==""|| y==""){
     document.getElementById('p2').innerHTML =  " ";
   }
-  if(x < 0|| y < 0){
+  if(x <= 0|| y <= 0){
     document.getElementById('p2').innerHTML =  " ";
   }
 }
@@ -86,7 +86,7 @@ function myfunc7() {
   if(x==""|| y==""){
     document.getElementById('p3').innerHTML =  " ";
   }
-  if(x < 0|| y < 0){
+  if(x <= 0|| y <= 0){
     document.getElementById('p3').innerHTML =  " ";
   }
 }
@@ -99,7 +99,7 @@ function myfunc8() {
   if(x==""|| y==""){
     document.getElementById('p4').innerHTML = " ";
   }
-  if(x < 0|| y < 0){
+  if(x <= 0|| y <= 0){
     document.getElementById('p4').innerHTML =  " ";
   }
 }
@@ -116,7 +116,7 @@ function check1(a1,a2)
   else if(a1 == "" && a2 ==""){
     return 1;
   }
-  else if(a1 < 0 || a2 < 0){
+  else if(a1 <= 0 || a2 <= 0){
     return 3;
   }
   else{
