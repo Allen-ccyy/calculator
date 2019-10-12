@@ -14,7 +14,7 @@ express()
   .use(express.urlencoded({ extended: false }))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
+  .get('/', (req, res) => res.render('pages/toki'))
   .get('/users',(req,res) =>{
     var getUserQuery = `SELECT * FROM userstab`;
     pool.query(getUserQuery, (error,result) =>{
@@ -48,7 +48,6 @@ express()
      res.render('pages/Error', { reason: "The name of Tokimon cannot be empty!" });
   }
   })
-
   .post('/delete', (req, res) => {
     var j = req.body.delete;
     var remove = `DELETE FROM userstab WHERE name = '${j}';`;
@@ -66,7 +65,6 @@ express()
       res.render('pages/Error',{ reason: "The name of Tokimon cannot be empty!" });
     }
   })
-
   .post('/change', (req, res) =>{
     var att = req.body.attribute;
     var val = req.body.number;
