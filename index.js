@@ -14,7 +14,7 @@ express()
   .use(express.urlencoded({ extended: false }))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
+  .get('/', (req, res) => res.render('pages/db'))
   .get('/users',(req,res) =>{
     var getUserQuery = `SELECT * FROM userstab`;
     pool.query(getUserQuery, (error,result) =>{
