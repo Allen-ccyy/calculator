@@ -15,7 +15,7 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/toki'))
-  .get('/users',(req,res) =>{
+  .post('/users',(req,res) =>{
     var getUserQuery = `SELECT * FROM userstab`;
     pool.query(getUserQuery, (error,result) =>{
       if(error)
