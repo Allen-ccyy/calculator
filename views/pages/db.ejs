@@ -1,102 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>USERS</title>
-  <style media="screen">
-  table{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 70%;
-  }
-
-  th{
-    text-align: left;
-    height: 20px;
-    padding-left: 5px;
-    background-color: #dedada;
-  }
-
-  td{
-    text-align: left;
-    height: 100px;
-    padding-left: 7px;
-  }
-
-  table,th,td{
-    border: 1px #beabab solid;
-    border-collapse: collapse;
-    table-layout: fixed;
-  }
-  </style>
   <% include ../partials/header.ejs %>
 </head>
 
 <body>
 
 <% include ../partials/nav.ejs %>
-<table>
-  <tr>
-    <th>name</th>
-    <th>weight</th>
-    <th>height</th>
-    <th>fly</th>
-    <th>fight</th>
-    <th>fire</th>
-    <th>water</th>
-    <th>electric</th>
-    <th>frozen</th>
-    <th>total</th>
-  </tr>
-  <% rows.forEach((r) => { %>
-  <tr>
-      <td><%= r.name %></td>
-      <td><%= r.weight %></td>
-      <td><%= r.height %></td>
-      <td><%= r.fly %></td>
-      <td><%= r.fight %></td>
-      <td><%= r.fire %></td>
-      <td><%= r.water %></td>
-      <td><%= r.electric %></td>
-      <td><%= r.frozen %></td>
-      <td><%= r.weight + r.height + r.fly +r.fight +r.fire + r.water + r.electric +r.frozen %></td>
-  </tr>
-  <% }); %>
-</table>
-<br>
-<br>
-<form class="" action="/login" method="post">
-  <input type="text" name="name" placeholder="Name">
-  <input type="text" name="weight" placeholder="Weight">
-  <br>
-  <input type="text" name="hight" placeholder="Hight">
-  <input type="text" name="fly" placeholder="Fly">
-  <br>
-  <input type="text" name="fight" placeholder="Fight">
-  <input type="text" name="fire" placeholder="Fire">
-  <br>
-  <input type="text" name="water" placeholder="Water">
-  <input type="text" name="electric" placeholder="Electric">
-  <br>
-  <input type="text" name="frozen" placeholder="Frozen">
-  <input type="text" name="total" placeholder="Total">
-  <br>
-  <input type="submit" name="" value="Add">
-</form>
-<br><br>
-<form class="" action="/delete" method="post">
-  <input type="text" name="delete" value="" placeholder="Tokimon Name">
-  <br>
-  <input type="submit" name="" value="Delete">
-</form>
-<br><br>
-<form class="" action="/change" method="post">
-  <input type="text" name="attribute" value="" placeholder="Attribute">
-  <input type="text" name="number" value="" placeholder="Values">
-  <br>
-  <input type="text" name="names" value="" placeholder="Tokimon Name">
-  <br>
-  <input type="submit" name="" value="Change">
-</form>
+
+<div class="container">
+<h2>Database Results</h2>
+
+<ul>
+    <% results.forEach(function(r) { %>
+        <li><%= r.id %> - <%= r.name %></li>
+    <% }); %>
+</ul>
+
+</div>
 
 </body>
 </html>
