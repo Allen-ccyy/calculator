@@ -259,6 +259,7 @@ function CalWeight(){
       var x = result;
       result = ((result/flag) * 100).toFixed(2) + '%';
       document.getElementById('result').innerHTML = result;
+      x.toFixed(3);
       document.getElementById('total').innerHTML = (x + "/" +flag);
     }
 
