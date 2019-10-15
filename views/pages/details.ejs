@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        background-image: url('https://wallpaperaccess.com/full/24908.jpg');
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        height: 2px;
+        border-top: 10px black solid;
+        min-width: 1500px;
+      }
+
+      .container{
+        background-color: grey;
+        padding-bottom: 5px;
+      }
+
+      .opq{
+        background-color: #221f1f;
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-top: 0px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        height: auto;
+      }
+
+      table{
+        width: 70%;
+        margin: auto;
+      }
+
+      th{
+        text-align: left;
+        height: 20px;
+        padding-left: 5px;
+        background-color: #dedada;
+      }
+
+      td{
+        text-align: left;
+        height: 100px;
+        padding-left: 7px;
+      }
+
+      table,th,td{
+        background-color: white;
+        margin-top: 20px;
+        width: 90%;
+        border: 3px #beabab solid;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+      .button {
+      	background-color: #1686d9;
+      	border: 2px solid white;
+      	border-radius: 30px;
+      	text-decoration: none;
+      	padding: 10px 28px;
+      	color: white;
+      	margin-top: 10px;
+        margin-left: 50px;
+        margin-bottom: 4px;
+      	display: inline-block;
+      }
+
+      input{
+        font-size: 20px;
+      }
+      input:hover{
+        background-color: white;
+        color: #1686d9;
+        border: 2px solid #1686d9;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form class="" action="/users" method="get">
+        <input type="submit" name="" class = "button" value="Back Home">
+      </form>
+    </div>
+    <div class="opq">
+  <p align = "center" style="color: white; font-size: 30px;"><strong>Tokidex</strong></p>
+    <br>
+    <table class="dis">
+      <tr>
+        <th>trainer name</th>
+        <th>name</th>
+        <th>weight</th>
+        <th>height</th>
+        <th>fly</th>
+        <th>fight</th>
+        <th>fire</th>
+        <th>water</th>
+        <th>electric</th>
+        <th>frozen</th>
+        <th>total</th>
+      </tr>
+      <% rows.forEach((r) => { %>
+      <tr>
+          <td id = cname><%= r.trainer %></td>
+          <td><%= r.name %></td>
+          <td><%= r.weight %></td>
+          <td><%= r.height %></td>
+          <td><%= r.fly %></td>
+          <td><%= r.fight %></td>
+          <td><%= r.fire %></td>
+          <td><%= r.water %></td>
+          <td><%= r.electric %></td>
+          <td><%= r.frozen %></td>
+          <td><%= r.weight + r.height + r.fly +r.fight +r.fire + r.water + r.electric +r.frozen %></td>
+      </tr>
+      <% }); %>
+      </table>
+    </div>
+  </body>
+</html>

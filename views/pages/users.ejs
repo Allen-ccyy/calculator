@@ -3,36 +3,84 @@
   <head lang="en" dir="ltr">
     <meta charset="utf-8">
     <title>USERS</title>
-    <style media="screen">
-    table{
-      margin-top: 20px;
-      margin-bottom: 20px;
-      width: 70%;
-    }
-
-    th{
-      text-align: left;
-      height: 20px;
-      padding-left: 5px;
-      background-color: #dedada;
-    }
-
-    td{
-      text-align: left;
-      height: 100px;
-      padding-left: 7px;
-    }
-
-    table,th,td{
-      border: 1px #beabab solid;
-      border-collapse: collapse;
-      table-layout: fixed;
-    }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/users.css">
   </head>
   <body>
-    <table>
+    <div class="bg-modal">
+      <div class="modal-content">
+        <div class="close" id="close">+</div>
+        <form class="" action="/login" method="post">
+          <input type="text" name="trainer" placeholder="Trainer Name">
+          <input type="text" name="name" placeholder="Name">
+          <input type="number" min = "0" name="weight" placeholder="Weight">
+          <input type="number" min = "0"name="hight" placeholder="Hight">
+          <input type="number" min = "0"name="fly" placeholder="Fly">
+          <input type="number" min = "0"name="fight" placeholder="Fight">
+          <input type="number" min = "0"name="fire" placeholder="Fire">
+          <input type="number" min = "0"name="water" placeholder="Water">
+          <input type="number" min = "0"name="electric" placeholder="Electric">
+          <input type="number" min = "0"name="frozen" placeholder="Frozen">
+          <input type="submit" name="" value="Save">
+        </form>
+      </div>
+    </div>
+
+    <div class="bg-modal">
+      <div class="modal-content">
+        <div class="close" id="close">+</div>
+        <form class="" action="/delete" method="post">
+          <input type="text" name="delete" value="" placeholder="Tokimon Name">
+          <input type="submit" name="" value="Save">
+        </form>
+      </div>
+    </div>
+
+    <div class="bg-modal">
+      <div class="modal-content">
+        <div class="close" id="close">+</div>
+        <form class="" action="/change" method="post">
+          <p><strong>Choose Tokimon from following:</strong></p><br>
+          <% rows.forEach((r) => { %>
+            <label for="tokiname" id = "aka" align = "left">----<   <%= r.name %>   > ----</label><br>
+          <% }); %>
+          <br>
+          <input type="text" name="attribute" value="" placeholder="Attribute">
+          <input type="number" name="number" min = "0" value="" placeholder="Values">
+          <input type="text" name="names" value="" placeholder="Tokimon Name">
+          <input type="submit" name="" value="Save">
+        </form>
+      </div>
+    </div>
+    <div class="bg-modal">
+      <div class="modal-content">
+        <div class="close" id="close">+</div>
+        <form class="" action="/display" method="post">
+        <p><strong>You can choose at most 3 Tokimon in the following</strong></p>
+        <% rows.forEach((r) => { %>
+          <label for="tokiname" id = "aka" align = "left">----<   <%= r.name %>   > ----</label><br>
+        <% }); %>
+        <br>
+        <input type="text" name="n1" id = "t1" value="" placeholder="First Tokimon">
+        <input type="text" name="n2" id = "t2" value="" placeholder="Second Tokimon">
+        <input type="text" name="n3" id = "t3" value="" placeholder="Third Tokimon">
+        <br><br>
+        <input type="submit" id ="zero" name="/display" value="Submit">
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <a href="#" id="button" class="button">Add Tokimon</a>
+      <a href="#" id="button1" class="button">Delete Tokimon</a>
+      <a href="#" id="button2" class="button">Change Attribute</a>
+      <a href="#" id="button4" class="button">Tokimon Size Display</a>
+    </div>
+
+    <div class="opq">
+    <p align = "center" style="color: white; font-size: 30px;"><strong>Tokidex</strong></p>
+    <br>
+    <table class="dis">
       <tr>
+        <th>trainer name</th>
         <th>name</th>
         <th>weight</th>
         <th>height</th>
@@ -46,7 +94,8 @@
       </tr>
       <% rows.forEach((r) => { %>
       <tr>
-          <td><%= r.name %></td>
+          <td id = cname><%= r.trainer %></td>
+          <td><a href="users/<%= r.name %>"><%= r.name %></a></td>
           <td><%= r.weight %></td>
           <td><%= r.height %></td>
           <td><%= r.fly %></td>
@@ -55,44 +104,11 @@
           <td><%= r.water %></td>
           <td><%= r.electric %></td>
           <td><%= r.frozen %></td>
-          <td><%= r.weight + r.height + r.fly +r.fight +r.fire + r.water + r.electric +r.frozen %></td>
+          <td><%= ((r.weight * 1000) + (r.height*1000) + (r.fly*1000) +(r.fight*1000) +(r.fire*1000) + (r.water*1000) + (r.electric*1000) +(r.frozen*1000))/1000 %></td>
       </tr>
       <% }); %>
     </table>
-    <br>
-    <br>
-    <form class="" action="/login" method="post">
-      <input type="text" name="name" placeholder="Name">
-      <input type="text" name="weight" placeholder="Weight">
-      <br>
-      <input type="text" name="hight" placeholder="Hight">
-      <input type="text" name="fly" placeholder="Fly">
-      <br>
-      <input type="text" name="fight" placeholder="Fight">
-      <input type="text" name="fire" placeholder="Fire">
-      <br>
-      <input type="text" name="water" placeholder="Water">
-      <input type="text" name="electric" placeholder="Electric">
-      <br>
-      <input type="text" name="frozen" placeholder="Frozen">
-      <input type="text" name="total" placeholder="Total">
-      <br>
-      <input type="submit" name="" value="Add">
-    </form>
-    <br><br>
-    <form class="" action="/delete" method="post">
-      <input type="text" name="delete" value="" placeholder="Tokimon Name">
-      <br>
-      <input type="submit" name="" value="Delete">
-    </form>
-    <br><br>
-    <form class="" action="/change" method="post">
-      <input type="text" name="attribute" value="" placeholder="Attribute">
-      <input type="text" name="number" value="" placeholder="Values">
-      <br>
-      <input type="text" name="names" value="" placeholder="Tokimon Name">
-      <br>
-      <input type="submit" name="" value="Change">
-    </form>
+    </div>
+    <script src="js/toki.js"></script>
   </body>
 </html>
