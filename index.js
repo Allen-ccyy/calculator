@@ -32,7 +32,6 @@ express()
       if(error)
         res.end(error);
       var results = {'rows': result.rows};
-      console.log(results);
       res.render('pages/details',results)
     })
 })
@@ -146,5 +145,21 @@ express()
       }
       else{res.render('pages/display',results);}
     })
+  })
+  .post('/find',(req,res) =>{
+    var c = req.body.find;
+    var bt;
+    if(c == "height"||c == "weight"||c == "fly"||c == "fight"||c == "fire"||c == "water"||c == "electric"||c == "frozen"||c == "trainer"){
+      bt = `SELECT DISTINCT ${c}, name FROM userstab;`;
+      pool.query(bt, (error,result) =>{
+      if(error)
+        res.end(error);
+      var results = {'rows': result.rows};
+      res.render('pages/find',results);
+    })
+    }
+    else{
+      res.render('pages/Error',{ reason: "The attribute does not exist!" });
+    }
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))

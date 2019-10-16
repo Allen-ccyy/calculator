@@ -32,6 +32,14 @@ close[3].addEventListener('click',function(){
   modal[3].style.display = 'none';
 });
 
+document.getElementById("button5").addEventListener("click", display6);
+function display6() {
+  modal[4].style.display = 'flex';
+}
+close[4].addEventListener('click',function(){
+  modal[4].style.display = 'none';
+});
+
 document.getElementById('zero').addEventListener("click", function(event) {
   var a = document.getElementById('t1').value;
   var b = document.getElementById('t2').value;
@@ -42,7 +50,7 @@ document.getElementById('zero').addEventListener("click", function(event) {
   }
 }, false);
 
-/*document.getElementById("button3").addEventListener("click", display4);
+document.getElementById("button3").addEventListener("click", display4);
 function display4(){
   if(document.getElementById('cname') == null){
     window.alert("There is no Tokimon in the Tokidex");
@@ -55,8 +63,3 @@ function display4(){
 if(document.getElementById('cname') == null){
   document.getElementsByClassName('opq')[0].style.display = 'none';
 }
-
-
-<p style="color: white; font-size: 30px;"><%= r.name %></p>
-<canvas id="myCanvas" width="${<%= r.weight %>}" height="${<%= r.height %>}" style="border:5px solid #d3d3d3;">
-*/
