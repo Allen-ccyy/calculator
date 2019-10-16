@@ -3,11 +3,72 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style media="screen">
+      body{
+        background-image: url('https://wallpaperaccess.com/full/24908.jpg');
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        height: 2px;
+        border-top: 10px black solid;
+        min-width: 1500px;
+      }
+
+      .container{
+        background-color: grey;
+        padding-bottom: 5px;
+      }
+
+      .opq{
+        background-color: #221f1f;
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-top: 0px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        height: auto;
+      }
+
+      .button {
+      	background-color: #1686d9;
+      	border: 2px solid white;
+      	border-radius: 30px;
+      	text-decoration: none;
+      	padding: 10px 28px;
+      	color: white;
+      	margin-top: 10px;
+        margin-left: 50px;
+        margin-bottom: 4px;
+      	display: inline-block;
+      }
+      .do{
+        display:inline-block;
+        text-align: center;
+        margin: 20px;
+      }
+      .box{
+        display: flex;
+        justify-content: center;
+
+      }
+      input{
+        font-size: 20px;
+      }
+
+    </style>
   </head>
   <body>
-    <p>Operation Done! Click the button to back!</p>
+    <div class="container">
       <form class="" action="/users" method="get">
-        <input type="submit" name="" value="Back">
+        <input type="submit" name="" class = "button" value="Back Home">
       </form>
+    </div>
+    <div class="opq">
+      <p align = "center" style="color: white; font-size: 30px;"><strong>Opeartion Done!</strong></p>
+      <br>
+      <div class="box">
+      </div>
+    </div>
   </body>
 </html>

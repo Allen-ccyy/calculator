@@ -29,6 +29,11 @@
       <div class="modal-content">
         <div class="close" id="close">+</div>
         <form class="" action="/delete" method="post">
+          <p><strong>Choose Tokimon from following:</strong></p><br>
+          <% rows.forEach((r) => { %>
+            <label for="tokiname" id = "aka" align = "left">----<   <%= r.name %>   > ----</label><br>
+          <% }); %>
+          <br>
           <input type="text" name="delete" value="" placeholder="Tokimon Name">
           <input type="submit" name="" value="Save">
         </form>
@@ -72,6 +77,15 @@
       <div class="modal-content">
         <div class="close" id="close">+</div>
         <form class="" action="/find" method="post">
+          <p><strong>Choose Attribute Rightly!</strong></p><br>
+          <p>Weight</p>
+          <p>Height</p>
+          <p>Fly</p>
+          <p>Fight</p>
+          <p>Fire</p>
+          <p>Water</p>
+          <p>Electric</p>
+          <p>Frozen</p>
           <input type="text" name="find" value="" placeholder="Tokimon Feature">
           <input type="submit" name="" value="Save">
         </form>
@@ -83,7 +97,7 @@
       <a href="#" id="button2" class="button">Change Attribute</a>
       <a href="#" id="button3" class="button">Open Tokidex And Show All</a>
       <a href="#" id="button4" class="button">Tokimon Size Display</a>
-      <a href="#" id="button5" class="button">Display Sigle Attribute</a>
+      <a href="#" id="button5" class="button">Display Single Attribute</a>
     </div>
 
     <div class="opq">
