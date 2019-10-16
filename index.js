@@ -32,6 +32,7 @@ express()
       if(error)
         res.end(error);
       var results = {'rows': result.rows};
+      console.log(results);
       res.render('pages/details',results)
     })
 })
