@@ -5,30 +5,14 @@
     <title>Start Page</title>
     <style media="screen">
     body {
-      background: #1b0606;
-      margin: 0 0 0 0;
-      width: 500px;
-      height: 300px;
-    }
-
-    .box{
-      width: 1920px;
-      height: 1420px;
-      background-color: white;
       background-image: url('https://wallpaperplay.com/walls/full/1/f/d/39437.jpg');
+      background-size: cover;                      /* <------ */
       background-repeat: no-repeat;
-      background-size:cover;
-      padding: 10px;
-      border-radius: 4px;
-      text-align: center;
-      left: 0;
-      line-height: 200px;
-      margin-top: -750px;
-      margin-left: 430px;
-      position: absolute;
-      text-align: center;
-      top: 50%;
-      border-bottom: 30px black solid;
+      background-position: center;
+      background-attachment: fixed;
+      height: auto 100%;
+      width:100%; height:100%;
+      position: relative;
     }
 
     .er{
@@ -37,12 +21,12 @@
       background-color: black;
     	border: 2px solid white;
     	border-radius: 30px;
-    	text-decoration: none;
     	padding: 5px 10px;
     	color: white;
     	margin-top: 1050px;
       margin-right: 1500px;
     	display: inline-block;
+      position: absolute;
     }
     </style>
   </head>
